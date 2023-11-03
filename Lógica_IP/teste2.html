@@ -1,0 +1,60 @@
+<meta charset = "UTF-8">
+<script> 
+
+function pulaLinha() {
+	document.write("<br>");
+}
+function mostra(frase) {
+	document.write(frase);
+	pulaLinha();
+}
+
+var idadeMinha = 18
+var idadeIrmão = 4
+var diferença = idadeMinha - idadeIrmão 
+
+mostra("<h1>Qual a diferença de idade entre meu irmão e eu?</h1>");
+
+mostra("A nossa diferença de idade é " + diferença + " anos!");
+
+</script>
+
+<h1> Quantas gerações?</h1>
+
+<script> 
+function pulaLinha() {
+	document.write("<br><br>");
+}
+function mostra(frase) {
+	document.write(frase);
+	pulaLinha();
+}
+var mediaIdadeFilhos = 28
+var anoAtual = 2022
+var ano = 1500
+var gerações = (anoAtual - ano)/mediaIdadeFilhos
+
+mostra("Desde o ano de 1500 até agora houveram mais ou menos " + Math.round((2022 - 1500)/28) + " gerações!")
+
+mostra("Desde o ano de 1500 até agora houveram mais ou menos " + Math.round(gerações) + " gerações!")
+
+</script>
+
+<script>
+
+
+function pulaLinha() {
+    document.write("<br><hr><br>");
+}
+
+function mostra(frase) {
+    document.write("<big>" + frase + "</big>");
+    pulaLinha();
+}
+
+var ano = 2019;
+mostra("Eu nasci em : " + (ano - 25));
+mostra("Adriano nasceu em : " + (ano - 26));
+mostra("Paulo nasceu em : " + (ano - 32));
+
+</script>

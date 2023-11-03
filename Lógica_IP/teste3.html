@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+var loginCadrastado = "luna"
+var senhaCadrastada = "luna0311"
+
+var tentativaAtual = 1
+var tentativaMaxima = 3
+
+var idade = parseInt(prompt("Digite sua idade:"));
+
+while( isNaN(idade) ) {
+	idade = parseInt(prompt("Digite sua idade:"));
+}
+alert(idade);
+
+while(tentativaAtual <= tentativaMaxima) {
+	var loginInformado = prompt("Informe seu login:");
+    var senhaInformada = prompt("Informe sua senha:");
+	
+	if (loginInformado == loginCadrastado && senhaInformada == senhaCadrastada) {
+	 alert("bem-vindo ao sistema, " + loginCadrastado + ".");
+	tentativaAtual = tentativaMaxima;
+
+} else { if (tentativaAtual == tentativaMaxima) {
+ alert("Número de tentativas máximas ultrapassada!");
+} else alert("Login ou senha invalidos.");
+} tentativaAtual = tentativaAtual + 1
+ }
+</script>

@@ -1,0 +1,90 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+let tela = document.querySelector("canvas");
+let pincel = tela.getContext("2d");
+
+function limpaTela(){
+
+	pincel.clearRect(0, 0, 600, 400);
+}
+function desenhaBola(x, y, raio){
+
+	pincel.fillStyle = "blue";
+	pincel.beginPath()
+	pincel.arc(x, y, raio, 0, 2*3.14);
+	pincel.fill();
+}
+let raio = 20
+let x = 20
+let y = 20
+
+let esquerda = 37;
+let direita = 39;
+let cima = 38;
+let baixo = 40;
+
+let taxa = 10
+
+function atualizaTela(){
+
+	limpaTela();
+	desenhaBola(x, y, raio);
+	if(x > 600){
+
+		x = 10;
+	}
+	if(x < 0){
+
+		x = 600; 
+	}
+	if(y > 400){
+
+		y = 10;
+	}
+	if(y < 0){
+
+		y = 400;
+	}
+
+}
+
+setInterval(atualizaTela, 10 ) ;
+
+
+function leDoTeclado(evento){
+	if(evento.keyCode == 16 && raio >= 20){
+
+		raio = raio - 10
+	}
+
+	if(evento.keyCode == 32 && raio <=100){
+
+		raio = raio + 10
+	}
+
+	if(evento.keyCode == esquerda){
+
+		x = x - taxa;
+	}
+	if(evento.keyCode == direita){
+
+		x = x + taxa;
+	}
+	if(evento.keyCode == cima){
+
+		y = y - taxa;
+	}
+	if(evento.keyCode == baixo){
+
+		y = y + taxa;
+	}
+}
+
+document.onkeydown = leDoTeclado;
+
+
+
+
+
+</script>

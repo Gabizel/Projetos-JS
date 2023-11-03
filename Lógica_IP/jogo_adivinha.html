@@ -1,0 +1,32 @@
+<meta charset ="UTF-8">
+<script>
+
+function pulaLinha() {
+	document.write("<br><br>");
+}
+function mostra(frase) {
+	document.write(frase);
+	pulaLinha();
+}
+function sorteia(n) {
+	return Math.round(Math.random() * n );
+}
+
+var numeroPensado = 5;
+var tentativas = 1;
+while(tentativas <= 3) {
+
+	var chute = parseInt(prompt("insira o seu chute de um número de 0 a 10"));
+ 	 if (chute == numeroPensado) {
+		mostra("Você acertou!");
+		break;
+	} else if (chute < numeroPensado) {
+		mostra("Você errou, o seu chute é menor que o número pensado.");
+	} else if (chute > numeroPensado) {
+		mostra("Você errou, o seu chute é maior que o número pensado.");
+	}  tentativas++;
+	
+} mostra("FIM.")
+
+
+</script>
